@@ -1,28 +1,102 @@
-# project-genai-post-generator
-This tool will analyze posts of a LinkedIn influencer and help them create the new posts based on the writing style in their old posts  
+## 🚀 AI-Powered LinkedIn Post Generator (GenAI Project)
 
-<img src="resources/tool.jpg"/>
+This project is an AI-powered LinkedIn post generation tool built using Generative AI and LLMs.
+It helps users create natural, professional LinkedIn posts by selecting a topic, length, and language (English or Hinglish).
 
-Let's say Mohan is a LinkedIn influencer and he needs help in writing his future posts. He can feed his past LinkedIn posts to this tool and it will extract key topics. Then he can select the topic, length, language etc. and use Generate button to create a new post that will match his writing style. 
+The system leverages few-shot learning to guide the LLM toward a realistic LinkedIn writing style rather than generic AI text.
 
-## Technical Architecture
+## ✨ Key Features
+
+Generate LinkedIn posts with a natural, professional tone
+
+Supports English and Hinglish
+
+Control post length (Short / Medium / Long)
+
+Uses few-shot examples to improve writing quality
+
+Simple and clean Streamlit UI
+
+Powered by Groq LLMs (Llama models)
+
+## 🧠 How It Works (High-Level Flow)
+
+Previously written LinkedIn posts are processed and structured.
+
+Metadata such as topic, language, and length is extracted.
+
+Relevant examples are selected for few-shot prompting.
+
+A custom prompt is generated and sent to the LLM.
+
+The LLM generates a LinkedIn-ready post matching the desired style.
+
+## 🏗️ System Architecture
 <img src="resources/architecture.jpg"/>
 
-1. Stage 1: Collect LinkedIn posts and extract Topic, Language, Length etc. from it.
-1. Stage 2: Now use topic, language and length to generate a new post. Some of the past posts related to that specific topic, language and length will be used for few shot learning to guide the LLM about the writing style etc.
+Stages:
 
-## Set-up
-1. To get started we first need to get an API_KEY from here: https://console.groq.com/keys. Inside `.env` update the value of `GROQ_API_KEY` with the API_KEY you created. 
-2. To get started, first install the dependencies using:
-    ```commandline
-     pip install -r requirements.txt
-    ```
-3. Run the streamlit app:
-   ```commandline
-   streamlit run main.py
-   ```
-Copyright (C) Codebasics Inc. All rights reserved.
+Data Processing – Analyze and structure LinkedIn post data
+
+Few-Shot Selection – Choose relevant examples based on user input
+
+LLM Generation – Generate a post using prompt engineering
+
+UI Layer – User interacts via Streamlit
+
+## 🛠️ Tech Stack
+
+Python
+
+LangChain
+
+Groq LLM (Llama)
+
+Streamlit
+
+Few-shot Prompting
+
+Environment-based API key management
+
+## ⚙️ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/Pa-rth518/linkedin-post-generator.git
+cd linkedin-post-generator
+
+2️⃣ Create Virtual Environment (Recommended)
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Configure Environment Variables
+
+Create a .env file:
+
+GROQ_API_KEY=your_api_key_here
 
 
-**Additional Terms:**
-This software is licensed under the MIT License. However, commercial use of this software is strictly prohibited without prior written permission from the author. Attribution must be given in all copies or substantial portions of the software.
+⚠️ Never push .env to GitHub.
+
+5️⃣ Run the Application
+streamlit run main.py
+
+## 📌 Project Motivation
+
+Most AI-generated LinkedIn posts feel robotic or unnatural.
+This project focuses on human-like tone, context awareness, and real LinkedIn writing patterns, making the output suitable for real professional use.
+
+📷 Demo / Screenshots
+<img src="resources/tool.jpg"/>
+
+## 📄 License
+
+This project is built for learning and portfolio purposes.
+Inspired by open-source GenAI workflows, but fully customized and implemented independently.
+
+## 👤 Author
+
+Parth Godage
+GenAI | LLM | RAG | LangChain | Python
+🔗 GitHub: https://github.com/Pa-rth518
