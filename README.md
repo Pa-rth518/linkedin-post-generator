@@ -88,7 +88,7 @@ Most AI-generated LinkedIn posts feel robotic or unnatural.
 This project focuses on human-like tone, context awareness, and real LinkedIn writing patterns, making the output suitable for real professional use.
 
 📷 Demo / Screenshots
-<img src="resources/tool.jpg"/>
+<img src="resources/Screenshot 2026-01-09 100357.png"/>
 
 ## 📄 License
 
